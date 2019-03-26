@@ -1,0 +1,28 @@
+page-member {
+    .avatar {
+        text-align: center;
+        padding: 15px 0;
+        img{
+            width: 60%;
+        }
+    }
+
+    ion-item {
+        padding: 0 !important;
+    }
+    button.tbn-update {
+        font-size: 20px;
+        border: 1px solid blue;
+        width: 1000%;
+    
+    }
+    
+    .image {
+        display: inline-block;
+        width: 160px;
+        height: 160px;
+        overflow: hidden;
+        -webkit-border-radius: 10%;
+        border-radius: 100%;
+    }
+}

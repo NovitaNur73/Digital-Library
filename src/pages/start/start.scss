@@ -1,0 +1,50 @@
+page-start {
+    .start{
+        position: relative;
+        background-color: #00070c;
+        height: 100vh;
+
+        .cover{
+            //position: absolute;
+            top: 25%;
+            text-align: center;
+            color: aliceblue;
+            width: 100%;
+
+            img{
+                width: 80%;
+                background-color: 0px; 
+                margin-right: 10px;
+                margin-top : 85px;
+                margin-bottom: 20px;
+            }
+
+            h2{
+                color: #ddabe7;
+                font-size: 29px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-family: 'Calibri (Body)';
+            }
+            p{
+                margin-top: 10px;
+                font-size: 20px;
+                color: #836483;            padding: 10px 10px;
+                font-family: 'Brush Script Std';
+            }
+        }
+
+        button{
+            padding: 50px 50px;
+            margin-top: 12px;
+            background-color: #7a0862;
+            bottom: 10%;
+            width: 50%;
+            left: 25%;
+            padding: 10px 10px;
+            font-size: 30px;
+            height: auto;
+            font-family: 'Calibri (Body)';
+        }
+    }
+}

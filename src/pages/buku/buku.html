@@ -1,0 +1,23 @@
+
+<ion-header class="head">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Katalog Buku</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-item *ngFor="let bk of buku">
+        <ion-thumbnail item-start>
+          <img src="{{ bk.cover }}">
+        </ion-thumbnail>
+        <h2>{{ bk.judul }}</h2>
+        <p>{{ bk.nama_pengarang }}</p>
+        <p>{{ bk.nama_kategori }} - {{ bk.edisi }}</p>
+        <button ion-button clear item-end (click)="viewBuku(bk)" >View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

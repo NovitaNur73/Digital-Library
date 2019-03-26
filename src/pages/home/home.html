@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-searchbar></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-slides [autoplay]=3000>
+
+          <ion-slide>
+            <img src="../../assets/imgs/open-book.jpg">
+          </ion-slide>
+        
+          <ion-slide>
+              <img src="../../assets/imgs/jackma1.jpg">
+          </ion-slide>
+        
+          <ion-slide>
+              <img src="../../assets/imgs/motivate1.jpg">
+          </ion-slide>
+
+          <ion-slide>
+              <img src="../../assets/imgs/jackma2.jpg">
+          </ion-slide>
+        </ion-slides>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+        <ion-icon name="bookmark"></ion-icon> Buku Terbaru
+    </ion-card-header>
+    <ion-card-content>
+        <ion-slides [slidesPerView]=3 class="list-buku">
+            <ion-slide *ngFor="let bk of buku">
+              <img src="{{ bk.cover }}" (click)="viewBuku(bk)">
+            </ion-slide>
+        </ion-slides>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="quotes">
+      <ion-card-content>
+          <p>"If you cannot do great things, do small things in a great way."  ~ Napoleon Hill</p>
+          <p>"Your time is limited, so don't waste it living someone else's life."  ~ Steve Jobs</p>
+      </ion-card-content>
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>300 Likes</div>
+            </button>
+          </ion-col>
+          <ion-col>
+              <button ion-button icon-start clear small>
+                <ion-icon name="text"></ion-icon>
+                <div>150 Comments</div>
+              </button>
+            </ion-col>
+            <ion-col align-self-center text-center>
+                <ion-note>
+                  1 hour ago
+                </ion-note>
+            </ion-col>
+        </ion-row>
+  </ion-card>
+</ion-content>

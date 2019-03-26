@@ -1,0 +1,70 @@
+page-register {
+
+    ion-title {
+        color: #fff;
+    }
+    
+    .toolbar-title-md{
+        color: #fff;
+    }
+
+    p {
+        color : #fff;
+    }
+    .button-inner {
+        color: #fff;
+    }
+
+    .registrasi {
+        position: relative;
+        background-color: black;
+        height: 100vh;
+
+        ion-item {
+            background-color: transparent !important;
+            padding-left: 0 !important;
+
+            ion-input {
+                color: #fff !important;
+            }
+        }
+
+        .list-md .item-input .item-input-has-focus .item-inner, .item-md .item-input.item-input-has-focus .item-inner {
+            border-bottom-color: #fff;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+
+        .item-input-has-focus .label-md[floating] {
+            color: #fff;
+        }
+
+        button.btnReg {
+            background: transparent;
+            width: 100%;
+            height: auto !important;
+            border-radius: 0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+
+        .logo {
+            text-align: center;
+
+            img {
+                width: 25%;
+            }
+            h2 {
+                font-size: 22px;
+                text-align: center;
+                color: #fff;
+                padding: 10px 0;
+                margin: 0;
+                font-weight: normal;
+            }
+        }
+    }
+}

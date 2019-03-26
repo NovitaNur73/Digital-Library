@@ -1,0 +1,58 @@
+<ion-header class="head">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Peminjaman</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-segment [(ngModel)]="perpus">
+      <ion-segment-button value="orders">
+        Orders
+      </ion-segment-button>
+      <ion-segment-button value="pinjam">
+        Pinjam
+      </ion-segment-button>
+      <ion-segment-button value="kembali">
+        Kembali
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="perpus">
+    <ion-list *ngSwitchCase="'orders'">
+      <ion-item-sliding *ngFor="let o of order">
+        <ion-item>
+          <h2>{{ o.no_pinjam }}</h2>
+          <p>{{ o.tgl_pinjam }} - {{ o.tgl_kembali }}</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="primary">
+            <ion-icon name="text"></ion-icon>
+              Text
+          </button>
+          <button ion-button color="secondary">
+            <ion-icon name="call"></ion-icon>
+              Call
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'pinjam'">
+        <ion-item *ngFor="let p of pinjam">
+          <h2>{{ p.no_pinjam }}</h2>
+          <h2>{{ p.tgl_pinjam }} - {{ p.tgl_kembali }}</h2>
+        </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'kembali'">    
+        <ion-item *ngFor="let k of kembali">
+          <h2>{{ k.no_pinjam }}</h2>
+          <h2>{{ k.tgl_pinjam }} - {{ k.tgl_kembali }}</h2>
+        </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
